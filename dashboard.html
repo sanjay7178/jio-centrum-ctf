@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://192.168.29.1/platform.cgi?page=dashboard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Language" content="en-us">
+ <title>Jio Centrum Home Gateway : </title>
+ <!--
+ Copyright (c) 2017-2018 TeamF1 networks Pvt. Ltd. (www.TeamF1networks.com)
+ All rights reserved.
+-->
+<link rel="shortcut icon" href="./dashboard_files/logo.png" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="./dashboard_files/style.css">
+<link rel="stylesheet" type="text/css" href="./dashboard_files/buttons.css">
+<link rel="stylesheet" type="text/css" href="./dashboard_files/menu.css">
+<link rel="stylesheet" type="text/css" href="./dashboard_files/table.css">
+<link rel="stylesheet" type="text/css" href="./dashboard_files/theme.css">
+<link rel="stylesheet" type="text/css" href="./dashboard_files/jquery-ui-1.8.4.custom.css">
+<script type="text/javascript" language="javascript" src="./dashboard_files/jquery-1.8.0.min.js.download"></script>  
+<!-- clickJacking control -->
+<script>
+       if(top.location.hostname != self.location.hostname) {
+           top.location = self.location; 
+       }
+</script>
+               
+<style type="text/css">
+        #bu-quicksearchdiv * {
+            box-sizing: content-box;
+        }
+
+        #bu-quicksearchdiv svg {
+            box-sizing: content-box;
+        }
+
+        #bu-disabledpopup * {
+            box-sizing: content-box;
+        }
+
+        #bu-search:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+        #bu-disabledpopup:before {
+            left: -4px !important;
+            top: 38% !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-right: none !important;
+            border-top: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(45deg) !important;
+        }
+
+        .topArrow #bu-search:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        .topArrow #bu-disabledpopup:before {
+            left: 50% !important;
+            top: -4px !important;
+            height: 6px !important;
+            width: 6px !important;
+            border: 1px solid #484644 !important;
+            border-top: none !important;
+            border-left: none !important;
+            content: ' ' !important;
+            background: #484644 !important;
+            position: absolute !important;
+            transform: rotate(225deg) !important;
+        }
+
+        #bu-disabledpopup:hover:before,
+        #bu-search:hover:before,
+        #bu-moreoptions:hover,
+        #bu-search:hover,
+        #bu-copy:hover,
+        #bu-disabledpopup:hover,
+        #bu-lookup:hover,
+        #bu-disableFeature:hover {
+            background-color: #666 !important;
+        }
+
+        #bu-disabledpopup:active:before,
+        #bu-search:active:before,
+        #bu-moreoptions:active,
+        #bu-search:active,
+        #bu-copy:active,
+        #bu-disabledpopup:active,
+        #bu-lookup:active,
+        #bu-disableFeature:active {
+            background-color: #666 !important;
+        }
+    </style></head>
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+<div class="container">
+<div class="nav-side-menu">
+            <div class="logo"><img src="./dashboard_files/logo.png" width="125" height="125">
+    </div>
+    <ul id="accordion" oncontextmenu="return false;">
+        
+         
+	
+        	<li id="tf1_hid_dashboard"><a href="javascript:void(0)" onclick="gotoLinks(&#39;dashboard.html&#39;)" id="mainMenu1" class="activeChild">DASHBOARD</a></li>
+	
+                               
+        <li><a href="javascript:void(0)" id="mainMenu2">STATUS</a>
+            <ul class="submenu" style="">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;deviceStatus.html&#39;)" id="tf1_status_devStatus"><span>›</span>Device Status</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;deviceStatistics.html&#39;)" id="tf1_status_devStatistics"><span>›</span>Device Statistics</a></li>
+                                  
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;lanDhcpLeasedClients.html&#39;)" id="tf1_status_lanDhcpLeasedClients"><span>›</span>LAN Clients</a></li>
+    
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;wirelessStatistics.html&#39;)" id="tf1_status_wirelessStatistics"><span>›</span>WLAN Statistics</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;wirelessClients.html&#39;)" id="tf1_status_wirelessClients"><span>›</span>WLAN Clients</a></li>
+		
+		
+				<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;meshTopology.html&#39;)" id="tf1_status_meshClients"><span>›</span>Mesh Network</a></li>
+		
+		
+		
+		</ul>
+        	</li>
+                                        
+        <li><a href="javascript:void(0)" id="mainMenu3">NETWORK</a>
+            <ul class="submenu" style="">
+              
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;lanIPv4Config.html&#39;)" id="tf1_network_lanIPv4Config"><span>›</span>LAN</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;accessPoints.html&#39;)" id="tf1_network_accessPoints"><span>›</span>Wireless</a></li>
+		
+              
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;routingMode.html&#39;)" id="tf1_network_routingMode"><span>›</span>Routing</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0)" id="mainMenu4" class="">SECURITY</a>
+            <ul class="submenu" style="display: none;">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;defaultPolicy.html&#39;)" id="tf1_security_defaultPolicy"><span>›</span>Firewall</a></li>
+		<!-- <li><a href="javascript:void(0)" onclick="gotoLinks('alg.html')" id="tf1_security_alg"><span>&rsaquo;</span>ALG</a> </li> -->
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;contentFiltering.html&#39;)" id="tf1_security_contentFiltering"><span>›</span>Content Filtering</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;vpnPassthrough.html&#39;)" id="tf1_security_vpnPassthrough"><span>›</span>VPN Passthrough</a> </li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;specificAttacks.html&#39;)" id="tf1_security_specificAttacks"><span>›</span>Attack Checks</a></li>
+		
+            </ul>
+        </li>
+        
+        
+        <li><a href="javascript:void(0)" id="mainMenu5" class="active">ADMINISTRATION</a>
+            <ul class="submenu" style="display: block;">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;users.html&#39;)" id="tf1_administration_users"><span>›</span>Users</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;webManagement.html&#39;)" id="tf1_administration_webManagement"><span>›</span>Web Management</a></li>
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;backupRestore.html&#39;)" id="tf1_administration_backupRestore"><span>›</span>Maintenance</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;diagnostics.html&#39;)" id="tf1_administration_diagnostics"><span>›</span>Diagnostics</a></li>
+		<li><a href="pkttrace.html" onclick="gotoLinks(&#39;pkttrace.html&#39;)" id="tf1_administration_pkttrace"><span>›</span>Packet Capture</a></li>
+        
+        
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;dateAndTime.html&#39;)" id="tf1_administration_dateAndTime"><span>›</span>Date &amp; Time</a></li>									
+            </ul>
+        </li>
+        
+                               
+        <li><a href="javascript:void(0)" id="mainMenu6">ADVANCED</a>
+            <ul class="submenu" style="">
+                                            
+		
+		<li>
+		<a href="javascript:void(0)" onclick="gotoLinks(&#39;accountingStatus.html&#39;)" id="tf1_advanced_accountingStatus"><span>›</span>Status</a></li>
+		
+			
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;serverSettings.html&#39;)" id="tf1_advanced_serverSettings"><span>›</span>DMS Server Settings</a> </li> 
+		
+        		
+        
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;bridgeMode.html&#39;)" id="tf1_advanced_maptConfiguration"><span>›</span>Network</a></li>
+		    
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;disks.html&#39;)" id="tf1_advanced_remoteSysLogSetup"><span>›</span>Administration</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;bandwidthProfiles.html&#39;)" id="tf1_advanced_bandwidthProfiles"><span>›</span>Bandwidth Profiles</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;trafficSelectors.html&#39;)" id="tf1_advanced_trafficSelectors"><span>›</span>Traffic Selectors</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;schedules.html&#39;)" id="tf1_advanced_schedules"><span>›</span>Schedules</a> </li>
+		 
+		<!-- <li><a href="javascript:void(0)" onclick="gotoLinks('ftpServer.html')" id="tf1_advanced_ftpServer"><span>&rsaquo;</span>FTP Server</a> </li> -->
+		
+        
+    
+            </ul>
+
+        </li>
+        
+        
+    </ul>
+
+<div class="firmwareInfo">
+
+<p>Firmware Version<br>
+<span>SRCMTF1_JCO4032_R2.41</span></p>
+<p>Serial Number<br>
+<span>RSTOTGG00018583</span></p>
+</div>
+</div>
+
+<div id="main">
+  
+<div class="content-topBlock">
+ 
+<div class="dropdown">
+
+<p class="dropbtn"> <label id="lblLoggedinUser" title="admin">Hi,
+				
+				admin					
+				
+
+			</label>
+			 (admin) <span></span></p> 
+
+  <div class="dropdown-content">
+    <a class="logOut FR" id="tf1_logoutAnchor" href="javascript:void(0)" onclick="closeConfirmForm()">Logout</a>
+  </div>
+</div>
+   <a class="btnHelp" id="tf1_helpAnchor" onclick="openHelpForm()" style="display: none;">?</a> 
+ 
+    <div id="demo-2" class="rilSearch">
+	<input type="text" id="menu1" class="searchMenu">
+          <ul id="menuList" class="hide" style="display: none; box-shadow: none;"></ul>
+    </div>
+
+</div>
+<div class="pageLinks">
+    <div class="breadcrumb FL">
+        <div id="breadCrumb">Dashboard</div>
+    </div>
+   
+<!-- <a class="logOut FR" href="?page=index.html">Disconnect</a> -->
+</div>
+ <div id="tf1_helpOverlay" class="configDialogMask"></div>
+        <form name="tf1_helpForm" id="tf1_helpForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">  
+<input type="hidden" name="token" value="eeshahphiechahngakahleekusaegietiemohdaiyeesieceexietheeweiveebe">			
+		  
+            <div class="configDialogHelp" id="tf1_helpDialog">
+	    <div class="topBg"><div class="helpText">Help</div><a id="helpBtnClose" title="Close" href="javascript:void(0)">X</a></div>
+                 <div id="tf1_helpContent" class="helpContentArea">
+                
+            </div>
+            </div>
+        </form>
+<div id="tf1_logOutOverlay" class="configDialogMask"></div>
+        <form name="tf1_logOutForm" id="tf1_logOutForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">   
+		  <input type="hidden" name="token" value="eeshahphiechahngakahleekusaegietiemohdaiyeesieceexietheeweiveebe">
+            <div class="configLogout" id="tf1_logOutDialog">
+	     <a id="logoutBtnClose" class="logoutBtnClose" title="Close" href="javascript:void(0)">X</a>
+                 <div id="tf1_logOutContent" class="logOutContentArea">
+		<p>Logout<span>Are you sure want to logout?</span></p>
+				<div class="logOutRow">
+				 <a id="logoutBtnClose" title="Cancel" href="javascript:void(0)" class="cancelBtn">Cancel</a>
+				 <a href="http://192.168.29.1/platform.cgi?page=index.html">OK</a>
+                                        </div>
+            </div>
+            </div>
+        </form>
+ 
+
+<div id="tf1_forcedLoginOverlay" class="configDialogMask"></div>
+        <form name="tf1_forcedLoginForm" id="tf1_forcedLoginForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">   
+		  <input type="hidden" name="token" value="eeshahphiechahngakahleekusaegietiemohdaiyeesieceexietheeweiveebe">
+            <div class="forcedLogin" id="tf1_forcedLoginDialog">
+	     <a id="forcedLoginClosea" class="logoutBtnClose" title="Close" href="http://192.168.29.1/platform.cgi?page=index.html">X</a>
+                 <div id="tf1_forcedLoginContent" class="logOutContentArea">
+		<p>Configuration Manager Forced Login<span></span></p>
+<input type="hidden" name="loginSession.username" id="tf1_loggedInUserName" value="">
+				<div class="btnRow" align="center">
+				  
+				 <a href="javascript:void(0)" onclick="continueValidate()" class="continue" align="center">Continue</a>
+                                        </div>
+            </div>
+            </div>
+        </form>
+<input type="hidden" id="tf1_hidden_hgwModelName" value="1"> 
+<!-- changes for 51744 starts -->
+<input type="hidden" id="tf1_hidden_gponStatus" value="1"> 
+<!-- changes for 51744 ends -->
+<!-- added changes for device specific starts -->
+
+
+
+
+<input type="hidden" id="tf1_hidden_deviceSpecificCheck" value="EC"> 
+
+
+<!-- added changes for device specific ends -->
+<!-- added for HW_HG261GU starts -->
+
+<!-- added for HW_HG261GU Ends -->
+<!--  added changes to hide DSCP To 802.1P Mapping starts  -->
+
+<!--  added changes to hide DSCP To 802.1P Mapping Ends  -->
+<!--added changes to show ap Group name for wifi Rural area starts  -->
+
+<!--added changes to show ap Group name for wifi Rural area ends -->
+<!--  added changes to hide JCO2031 GUI Modification starts  -->
+
+<!--  added changes to hide JCO2031 GUI Modification Ends  -->
+
+  <input type="hidden" id="tf1_hidden_ae" value="0"> 
+  
+
+
+
+<input type="hidden" id="tf1_hidden_mesh_enabled" value="1"> 
+
+
+<!-- if ((util.fileExists("/pfrm2.0/BRCM_MESH_ENABLED")))  then ?> -->
+<!--input type="hidden" id="tf1_hidden_mesh_config_disabled" value="1"> --> 
+<!--lua end ?> -->
+
+
+  
+
+<input type="hidden" id="tf1_hidden_flash_mesh_enabled" value="1"> 
+
+
+<input type="hidden" id="tf1_hidden_jma24" value="0"> 
+
+
+
+<input type="hidden" id="tf1_hidden_smartCableHeader" value="1"> 
+
+
+<div class="contentMidArea">		
+ <div id="tf1_overlay" class="configDialogMask"></div>
+        <form name="frmDashboard" id="frmDashboard" action="http://192.168.29.1/platform.cgi" method="post">
+		<input type="hidden" id="tf1_form_hid_token" value="eeshahphiechahngakahleekusaegietiemohdaiyeesieceexietheeweiveebe">
+        	<input type="hidden" name="thispage" value="dashboard.html">
+            <div id="tf1_dialog" class="configDialog">
+                Loading.. Please wait...
+            </div>
+        </form>	
+<div class="mainContentDBord">		
+	
+<div class="graphArea">
+   <a href="javascript:void(0)" onclick="getUtilizationData(&#39;refresh&#39;)" title="Refresh" class="dashBtnRefresh">&nbsp;</a>
+<table cellpadding="0" cellspacing="0" border="0" width="607px">
+  <tbody><tr>
+    <td style="vertical-align: top; width:50%"> 
+      <div class="widgetLoading" id="tf1_loadingCPUDiv" style="display: none;">Loading...</div>
+      <section style="" id="tf1_CPUSec" class="dashboard">
+        <div class="titleOne">CPU Utilization</div>
+            <div id="container">
+          <canvas id="cpuChart" width="170" height="170"></canvas>
+      
+          <table id="cpuChartData" cellpadding="0" cellspacing="0" border="0">
+            <tbody><tr style="color: #fa6b02">
+              <td>User</td>
+              <td id="cpuChartDataR1">25%</td>
+            </tr>
+            <tr style="color: #960064">
+              <td>Kernel</td>
+              <td id="cpuChartDataR2">5%</td>
+            </tr>
+            <tr style="color: #336600">
+              <td>Idle</td>
+              <td id="cpuChartDataR3">71%</td>
+            </tr>
+            <tr style="color: #0f9494">
+              <td>IO </td>
+              <td id="cpuChartDataR4">0%</td>
+            </tr>
+          </tbody></table>
+        </div>
+      </section>
+    </td>
+    <td style="vertical-align: top; width:50%"> 
+      <div class="widgetLoading" id="tf1_loadingMemoryUtilizationDiv" style="display: none;">Loading...</div>
+  <section style="" id="tf1_memoryUtilization" class="dashboard">
+      <div class="titleOne">Memory Utilization</div>
+    <div id="container">
+      <canvas id="cpuChartMemory" width="170" height="170"></canvas>
+      <table id="cpuChartMemoryData">
+        <tbody><tr style="color: #336600">
+          <td>Free</td>
+          <td id="cpuChartMemoryDataR1">33.3%</td>
+        </tr>
+        <tr style="color: #0f9494">
+          <td>Occupied</td>
+          <td id="cpuChartMemoryDataR2">66.7%</td>
+        </tr>
+      </tbody></table>
+    </div>
+  </section>
+</td>
+</tr>
+</tbody></table>
+ 
+ 
+<div class="CLR attachedDisksBlock">
+<div class="titleTwo">Attached Disk(s)</div>
+<div class="disksAttached">
+		<div class="dashboardRow FL" style="width: 230px">
+		<label style="width: 50%">N.A : [N.A]</label>
+		<div class="diskSpace">
+		<div class="spaceOut">
+		<div class="spaceInOne" style="width: 0px;">&nbsp;</div>
+		</div>
+		0 % </div>
+		</div>
+
+		
+		</div>	
+
+
+</div>
+
+</div>
+
+                               
+<div class="applicationBlock">
+<div class="titleThree">Application</div>
+                                
+<div class="dbRow">
+<label>Accounting</label>
+ <p><span class="noYes"></span></p>
+</div>
+<div class="dbRow">
+<label>Bridge Mode</label>
+ <p><span class="noYes"></span></p>
+</div>
+ 
+ 
+<!-- <div class="dbRow">
+<label>FTP Server</label>
+<p><span class="noYes"></span></p>
+</div> -->
+
+<div class="dbRow">
+<label>MAP-T</label>
+ <p><span class="noYes"></span></p>
+</div>
+
+<div class="dbRow">
+<label>TR-069</label>
+<p><span class="yesNo"></span></p>
+</div>
+                                
+<div class="dbRow">
+<label>Unauthorized Usage Prevention</label>
+ <p><span class="noYes"></span></p>
+</div>
+
+<div class="dbRow">
+<label>UPnP</label>
+ <p><span class="noYes"></span></p>
+</div>
+
+
+                              
+  
+<div class="dbRow">
+<label>WMM</label>
+<p><span class="yesNo"></span></p>
+</div>
+
+                              
+
+<div class="dbRow">
+<label>DMS</label>
+ <p>
+ 
+ <span class="noYes"></span>
+                                                                                             
+ </p>      
+</div>
+ 
+                 
+
+</div>
+
+
+<div class="clearAll"></div>
+<div class="diviceStatusBlock">
+
+ <div class="diviceStatus">
+ <div class="diviceTitle">Device Status</div>
+ 
+ <div class="deviceRow">
+ <label>System Name</label>
+  <p>reliance</p>
+ </div>
+<div class="deviceRow">
+ <label>Version #</label>
+<p>SRCMTF1_JCO4032_R2.41</p>
+ </div>
+<div class="deviceRow">
+ <label>Serial #</label>
+<p>RSTOTGG00018583</p>
+ </div>
+ <div class="deviceRow">
+<label>Model Name</label>
+<p>JCO4032</p>
+</div> 
+   
+<div class="deviceRow">
+ <label>Wireless</label> 
+ 
+                 <div class="FL" style="width: 50%;"><p class="FL"><span class="yesNo">&nbsp;</span>(2.4 GHz)</p> <p class="FR"><span class="yesNo">&nbsp;</span>(5 GHz) </p></div>
+                
+ </div>
+
+ 
+
+   
+<div class="deviceRow">
+   <label>SSID (Default) </label>
+		
+                <p class="wrapText noWhtSpace" alt="Cryptane" title="Cryptane"> Cryptane</p>
+		
+ </div>
+ 
+ 
+               
+<div class="deviceRow">
+ <label>SSID 5 GHz</label>
+		 
+		<p class="wrapText noWhtSpace" alt="Cryptane5G" title="Cryptane5G"> Cryptane5G</p> 
+  	     	
+</div>
+   
+  
+<div class="deviceRow">
+ <label>Wireless Clients</label>   <p>5 <a href="javascript:void(0)" class="moreText" onclick="openPreviewForm(&#39;button.moreWirelessInfo.dashboard.dashboard&#39;,&#39;-1&#39;,&#39;tf1_dialog&#39;,&#39;dashboard&#39;,&#39;dashboard.html&#39;);">(More Info...)</a></p>
+ </div>
+    
+ </div>
+ 
+
+
+ <div class="userSecurityBlock">
+  
+                               
+<div class="voipBlock">
+  <div class="voipTitle">VOIP</div>
+
+<div class="voipRow">
+    <label>Registration Status</label>
+    <p><span class="yesNo">&nbsp;</span></p>
+  </div>
+  <div class="voipRow">
+    <label>Outgoing Call to </label>
+    <p>N/A</p>
+  </div>
+  <div class="voipRow">
+    <label>Incoming Call from</label>
+    <p>N/A</p>
+  </div>
+  <div class="voipRow">
+    <label>Call Status</label>
+    <p>Idle</p>
+  </div>
+
+
+  
+  </div>
+
+
+                               
+  <div class="securityBlock">
+                              
+    <div class="securityTitle">Security</div>
+ <div class="securityRow">
+ <label>Firewall Policy</label><p>Always Allow</p>
+ </div>
+    
+  <div class="securityRow">
+ <label>Security Mode</label> <p>WPA2</p>
+ </div>
+   
+  <div class="securityRow">
+ <label>Content Filtering</label><p><span class="noYes"></span></p>
+ </div>
+   
+  <div class="securityRow">
+ <label>Home Secure</label><p><span class="noYes"></span></p>
+ </div>
+   
+
+     
+
+
+  </div>
+  </div>
+              
+  <div class="wanLanBlock">
+                               
+  <div class="wanTitle">WAN <a href="javascript:void(0)" class="moreText" onclick="openPreviewForm(&#39;button.moreWANInfo.dashboard.dashboard&#39;,&#39;-1&#39;,&#39;tf1_dialog&#39;,&#39;dashboard&#39;,&#39;dashboard.html&#39;);">(More Info...)</a></div>
+<div class="securityRow">
+ <label>Internet (IPV4) </label> 
+<p><span class="yesNo">&nbsp;</span>(DHCP)</p> 
+</div>
+                                                                             
+    <div class="securityRow">                                                                                
+    <label>Internet (IPV6)</label>                                                                      
+<p><span class="yesNo">&nbsp;</span>DHCP (Stateful)</p>            
+    </div>                                                                                                   
+    
+    <div class="securityRow">
+ <label>MAC Address</label> <p>4c:93:a6:88:c1:e3</p>
+ </div>
+   <div class="securityRow">
+ <label>IPv4 IP Address</label> <p>10.10.234.189</p>
+ </div>
+   <div class="securityRow">
+ <label>WAN State</label><p><span class="yesNo"></span></p>
+ </div>
+
+              <div class="securityRow">
+                  <label>
+                      IPv6 IP Address
+                    </label>
+                      
+                      <p class="ipv6AddressMore">2405:201:800b:a000:46fe:11ea:3a17:1710/128</p>
+              
+                      <p class="ipv6AddressMore">fe80::4e93:a6ff:fe88:c1e3/64</p>
+               </div>
+                   
+
+              
+              
+	   
+	   
+ <div class="clearAll"></div> 
+                               
+  <div class="lanTitle">LAN <a class="moreText" href="javascript:void(0)" onclick="openPreviewForm(&#39;button.moreLANInfo.dashboard.dashboard&#39;,&#39;-1&#39;,&#39;tf1_dialog&#39;,&#39;dashboard&#39;,&#39;dashboard.html&#39;);">(More Info...)</a></div>
+    <div class="securityRow">
+ <label>MAC Address</label> <p>4c:93:a6:88:c1:e4</p>
+ </div>
+   <div class="securityRow">
+ <label>IPv4 IP Address</label><p>192.168.29.1</p>
+ </div>
+   <div class="securityRow">
+ <label>DHCP State</label><p><span class="yesNo"></span></p>
+ </div>
+ 
+
+ 
+
+              
+                
+                <div class="securityRow">
+                    <label>
+                        IPv6 IP Address
+                    </label>
+                    
+                      <p class="ipv6AddressMore">2405:201:800b:aefe:4e93:a6ff:fe88:c1e4/64</p>
+                
+                      <p class="ipv6AddressMore">fe80::4e93:a6ff:fe88:c1e4/64</p>
+                
+                      <p class="ipv6AddressMore">2405:201:800b:aefe::c0a8:1d01/64</p>
+                 </div>
+                     
+                 
+ 
+  
+</div>
+
+ </div>	 
+	 
+	 
+</div>
+</div>
+                
+                    
+<div class="push">&nbsp;</div>      
+</div>
+<footer>
+	<div class="copyright"> © 2019 TeamF1, Inc. All Rights Reserved.</div>
+</footer>
+</div>
+<div id="tf1_pageLoadingOverLay" class="configOnloadDialogMask"></div>
+<div class="msgInfoLoading loadingDialog" id="tf1_pageLoadingMask">
+    <p> Loading Please wait..!</p>
+</div>
+<script type="text/javascript" language="javascript" src="./dashboard_files/loadingStatus.js.download">
+</script>
+<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+			$("#accordion > li > a").click(function() {
+			       $(this).closest('li').siblings().find('a').removeClass('active').next('ul').slideUp(250);
+			       $(this).toggleClass("active").next('ul').slideToggle(250);
+			   });
+
+				window.onresize = function(event){
+					var leftPx = $(window).innerWidth()/2 - $(".configDialog").width()/2;
+					leftPx = Math.round(leftPx);
+					$(".configDialog").css('left',leftPx+'px');	
+				/* page loading mask starts */
+				var maskLeftPx = $(window).innerWidth()/2 - $("#tf1_pageLoadingMask").width()/2;
+				var maskHeightPx = $(window).innerHeight()/2 - $("#tf1_pageLoadingMask").height()/2;
+				maskLeftPx = Math.round(maskLeftPx);
+				maskHeightPx = Math.round(maskHeightPx);
+				$("#tf1_pageLoadingMask").css('left',maskLeftPx+'px');
+				 $("#tf1_pageLoadingMask").css('top',maskHeightPx+'px');
+					/* page loading mask ends */
+					//menusUlPositioning();
+					/* added changes to remove boxShadow for search box starts*/
+					document.getElementById('menuList').style.boxShadow="none";	
+					document.getElementById('menuList').style.display="none";		
+					/* added changes to remove boxShadow for search box ends*/
+			}	
+			});
+ 
+</script>
+
+<!--[if IE 9]>
+<script>
+	if(Function('/*@cc_on return 9===document.documentMode@*/')()){
+		var midAreadivs = document.getElementsByClassName('midArea');
+		if (midAreadivs.length > 0 ){
+			midAreadivs[0].style.setProperty('filter','none');
+		}
+	}
+</script>
+<![endif]-->
+<script type="text/javascript" language="javascript" src="./dashboard_files/mgmt.js.download"></script>
+<script type="text/javascript" language="javascript" src="./dashboard_files/mis.js.download"></script>
+<script type="text/javascript" language="javascript" src="./dashboard_files/menu.js.download"> </script>
+<script language="JavaScript" src="./dashboard_files/menuSearchList.js.download" type="text/javascript"></script>
+<script language="JavaScript" src="./dashboard_files/menuSearch.js.download" type="text/javascript"></script>
+
+		<input type="hidden" id="tf1_form_hid_token" value="eeshahphiechahngakahleekusaegietiemohdaiyeesieceexietheeweiveebe">
+     <input type="hidden" id="tf1_hidden_forcedLoginFlag" value="">
+ <script type="text/javascript" language="javascript" src="./dashboard_files/jquery.dataTables.min.js.download"></script>
+<script type="text/javascript" language="javascript" src="./dashboard_files/textValidations.js.download"></script>
+
+<script type="text/javascript" language="javascript" src="./dashboard_files/dashboard.js.download"></script> 
+<script type="text/javascript" charset="utf-8">
+	var disk1Usage = 0/2;
+	var disk2Usage = -1/2;
+
+	$(".spaceInOne").width(Math.round(disk1Usage));
+	$(".spaceInTwo").width(Math.round(disk2Usage));
+  var onloadUtilizationObj = new Object ();
+  onloadUtilizationObj.User = 25;
+  onloadUtilizationObj.Kernel = 5;
+  onloadUtilizationObj.IdleTime = 71;
+  onloadUtilizationObj.IOs = 0;
+  onloadUtilizationObj.Free = 33.3;
+  onloadUtilizationObj.Occupied = 66.7;
+
+			$(document).ready(function() {
+            $(".btnHelp").hide(); // hiding help for dashboard
+     getUtilizationData('onload');
+ 			$("#btnClose").live("click",function(e){
+        			HideDialog('tf1_dialog', 'tf1_overlay');
+        			e.preventDefault();
+		            /* setting recordModified=1 if the form is opened but closed by clicking "x" icon without submitting */
+		            document.cookie = "recordModified=1";
+	    		});
+ 
+				/* Help Section variables */
+				helpSection = "dashboard";				
+				helpConfigFile = "status.txt";				
+
+				/* Header section javascript bindings */
+				menuLoading();
+                                mmSel("mainMenu1",'mainMenu1');
+                                getBreadCrumb(107);
+forcedLoginHidVal = document.getElementById('tf1_hidden_forcedLoginFlag').value;
+if(forcedLoginHidVal == "1"){
+forcedLoginForm();
+}
+                
+			});
+      /**
+       * Function for forced Login Form
+       * @method forcedLoginForm
+       */
+      function forcedLoginForm(){
+          var leftPx = $(window).innerWidth()/2 - $(".forcedLogin").width()/2;
+          var topPx = $(window).innerHeight()/2 - $(".forcedLogin").height()/2;
+          leftPx = Math.round(leftPx);
+          topPx = Math.round(topPx);
+          $(".forcedLogin").css('left',leftPx+'px');
+          $(".forcedLogin").css('top',topPx+'px');
+          ShowDialog(true, 'tf1_forcedLoginDialog', 'tf1_forcedLoginOverlay');
+      			    
+      }
+     	   /*****
+           @method continueValidate
+           *****/
+           function continueValidate() {
+var dataString = document.getElementById('tf1_loggedInUserName').value;
+ var loggedInUserNameVal = dataString.match(/'([^']+)'/)[1];
+             dataString1 =	 "button.continue.index=Continue&thispage=index.html&tf1_hTmp1="+1+"&tf1_hTmp2="+1+"&loginSession.username="+loggedInUserNameVal;
+             $.ajax({
+               type: "POST",
+               url: "platform.cgi",
+               data: dataString1,
+               success: function(dataHTML1){
+                 upperCaseConversion1 = dataHTML1.toUpperCase().trim();
+         	//HideDialog('tf1_forcedLoginDialog', 'tf1_forcedLoginOverlay');
+                 if(upperCaseConversion1.search("CHANGEPASSWORD") != -1){
+                   window.location="platform.cgi?page=changePassword.html"; 
+                 }else if(upperCaseConversion1.search("DASHBOARD") != -1){
+                   window.location="platform.cgi?page=dashboard.html"; 
+                 }
+               },
+               dataType:'html'
+             });
+             return true; 
+           }
+ 	 function onloadMoreWirelessInfoFn(){
+        oTable = $('#recordsDataWirelessInfo').dataTable({
+          "bJQueryUI": true,
+          "sPaginationType": "full_numbers"
+       });
+    }	
+        </script>
+       <style>
+        .noWhtSpace { white-space: pre-wrap;}
+        </style>
+    
+
+
+<div id="bu-quicksearch" style="position: fixed; z-index: 10000; display: none;">
+    <div id="bu-disabledpopup" style="cursor: pointer;display: block;position: relative;width: fit-content;padding: 8px;line-height: 16px;border: 1px solid #666;border-radius: 6px;background-color: #484644;font-style: normal;font-weight: normal;color:  #fff;font-size: 13px;font-family: Roboto,Arial,Helvetica,sans-serif;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);">
+        <span style="
+            float: left;
+            padding: 0px 12px 0px 4px;
+            ">
+            You've turned off quick searches.
+        </span>
+        <span id="bu-undo" style="padding: 0px 4px 0px 8px;">
+            <span style="
+               width: 15px;
+               height: 15px;
+               float: left;
+               ">
+                <svg enable-background="new 0 0 16 16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m14.259 2.75c-1.159-1.16-2.688-1.744-4.207-1.743-1.52-.001-3.049.583-4.208 1.743l-2.843 2.827v-2.57c0-.552-.448-1-1-1h-.016c-.552 0-.984.448-.984 1v5c0 .552.432.993.984.993h5.016c.552 0 1-.441 1-.993s-.448-1-1-1h-2.601l2.859-2.843c.774-.773 1.779-1.156 2.793-1.157 1.014.001 2.019.384 2.793 1.157.772.774 1.155 1.778 1.156 2.793-.001 1.014-.384 2.019-1.157 2.793l-4.543 4.543c-.391.391-.391 1.024 0 1.414.391.391 1.024.391 1.414 0l4.543-4.543c1.16-1.159 1.743-2.688 1.742-4.207.002-1.52-.582-3.048-1.741-4.207z" fill="#fff"></path>
+                    <path d="m0 0h16v16h-16z" fill="none"></path>
+                </svg>
+            </span>
+            Undo
+        </span>
+    </div>
+    <div id="bu-quicksearchdiv" style="display: inline-block;position: relative;height: 32px;border: 1px solid #666;border-radius: 6px;background-color: #484644; font-style: normal;font-weight: normal;color:  #fff;font-size: 13px;font-family: Roboto,Arial,Helvetica,sans-serif;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);">
+        <div id="bu-search" style="border-radius: 5px 0px 0px 5px;height:-webkit-fill-available;height:-moz-fit-content;float: left;line-height: 15px;text-align: center;cursor: pointer;box-sizing: border-box;">
+            <span style="
+               float: left;
+               padding: 8px 12px 8px 8px;
+               height: -webkit-fill-available;
+               ">
+                Web
+                search
+            </span>
+        </div>
+        <div style="        border-left: 1px solid #D2D0CE;
+            float: left;
+            margin: 0px;
+            top: 0;
+            height: 32px;
+            "></div>
+        <div style="height:-webkit-fill-available;height:-moz-fit-content;float: left;padding: 8px 12px 8px 12px;line-height: 15px;text-align: center;cursor: pointer;" id="bu-copy">
+            Copy
+        </div>
+        <div style="        border-left: 1px solid #D2D0CE;
+            height: 32px;
+            float: left;
+            margin: 0px;
+            top: 0;
+            "></div>
+        <div id="bu-moreoptions" style="border-radius: 0px 5px 5px 0px;height:-webkit-fill-available;height:-moz-fit-content;width: 16px;float: left;padding: 8PX 8px 0px 8px;text-align: center; cursor: pointer;position: relative;">
+            <span style="width: 16px;">
+                <svg enable-background="new 0 0 16 16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m1.5 6.5c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm6.5 0c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5zm6.5 0c-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5 1.5-.672 1.5-1.5-.672-1.5-1.5-1.5z" fill="#fff"></path>
+                    <path d="m0 0h16v16h-16z" fill="none"></path>
+                </svg>
+            </span>
+        </div>
+        <div>
+            <span style="width: 160px;border: 1px solid #666;border-radius: 6px;position: absolute;top: 40px;left: 105px;box-shadow: 0px 3px 4px 0px rgba(0,0,0,.14);background-color: #484644;overflow: hidden;" id="bu-popup">
+                <div style="padding: 8px 12px;line-height: 15px;font-size: 13px;cursor: pointer;text-align: left;" id="bu-lookup">
+                    Define
+                </div>
+                <hr style="        border: 0.5px solid #D2D0CE;
+                  margin: 0;
+                  cursor: default;
+                  height: 0px;
+                  background-color: #3b3a39;">
+                <div style="padding: 8px 12px;line-height: 15px;font-size: 13px;cursor: pointer;text-align: left;" id="bu-disableFeature">
+                    Turn off quick searches
+                </div>
+            </span>
+        </div>
+    </div>
+
+
+</div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

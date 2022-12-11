@@ -1,0 +1,721 @@
+/* menuSearch.js - API for creating and using search list */
+
+/*
+ * Copyright (c) 2012 TeamF1, Inc.
+ * All rights reserved.
+ */
+/*
+ * Modifications History
+ * ------------------------
+ */
+/* Global Objects */
+var divObj;
+var indexVal = 0;
+
+document.onkeyup = setKeyFunction;
+
+/***************************************************************************
+ * convertToLowerCase - Converts a value to lower case
+ *
+ * This routine converts the given value to lower case.
+ *
+ * @param: fldObjVal - Value to be converted to lower case
+ * @return: value
+ */
+function convertToLowerCase(fldObjVal){
+    return fldObjVal.toLowerCase();
+}
+
+/***************************************************************************
+ * searchEnteredValue - Creates search list based on the entered string
+ *
+ * This routine appends objects created, based on the string provided,
+ * to the div object.
+ *
+ * @param: fldValue - String entered to search for
+ *           fldObj - Object that consists of an array of objects
+ * @return: NONE
+ */
+function searchEnteredValue(fldValue, fldObj){
+    var groupObj = new Array();
+    var selectedKeys = [];
+    var splitValues = fldValue.split(" ");
+	hgwModelName = document.getElementById('tf1_hidden_hgwModelName').value;
+  gopnStatus =  document.getElementById('tf1_hidden_gponStatus').value;
+  deviceSpecificVal =  document.getElementById('tf1_hidden_deviceSpecificCheck').value;
+  aludeviceSpecificObj =  document.getElementById('tf1_hidden_aludeviceSpecificCheck');
+  hgguDeviceSpecfic =  document.getElementById('tf1_hidden_HW_HG261GUSpecificCheck');
+  hideEthernetAll =  document.getElementById('tf1_hidden_ethernetAll');
+  wifiRuralCheck = document.getElementById('tf1_hidden_wifiRuralArea');
+  jco2031_check = document.getElementById('tf1_hidden_JCO2031');
+  flashMeshCheckObj = document.getElementById('tf1_hidden_flash_mesh_enabled');
+
+  var meshObj = document.getElementById('tf1_hidden_mesh_enabled');
+  var meshconfObj = document.getElementById('tf1_hidden_mesh_config_disabled');
+  var eogreObj = document.getElementById('tf1_hidden_eogre');
+  var jma24Obj = document.getElementById('tf1_hidden_jma24');
+  var allotObj = document.getElementById('tf1_hidden_allot_disabled');
+   var smartCablebj = document.getElementById('tf1_hidden_smartCableHeader');
+    if (smartCablebj) {
+     if(smartCablebj.value == "1"){
+       menuSearchList["menu133"] = {
+         "mainMenu": "Network",
+         "secondLevelMenu": "Channel Spacing",
+         "thirdLevelMenu": "",
+         "hrefAttrLink": "channelSpacing.html",
+         "breadCrumb": "Network@@Wireless@@Channel Spacing"
+       };
+      
+     }
+  }
+  if (meshObj) {
+     if(meshObj.value == "1"){
+       menuSearchList["menu126"] = {
+         "mainMenu": "Advanced",
+         "secondLevelMenu": "Mesh Topology",
+         "thirdLevelMenu": "",
+         "hrefAttrLink": "meshTopology.html",
+         "breadCrumb": "Advanced@@Mesh Topology"
+       };
+       menuSearchList["menu128"] = {
+         "mainMenu": "Advanced",
+         "secondLevelMenu": "Mesh Configuration",
+         "thirdLevelMenu": "",
+         "hrefAttrLink": "meshConfiguration.html",
+         "breadCrumb": "Advanced@@Mesh Configuration"
+       };
+     }
+  }
+    for (var key in fldObj) {
+        var keyName = convertToLowerCase(fldObj[key].secondLevelMenu);
+    var keyName1 = convertToLowerCase(fldObj[key].mainMenu);
+        /* Ignore pages which are not direct links */
+        if ((key != 'menu51' && key != 'menu52')) {
+          if (eogreObj) {
+          if(eogreObj.value == "1"){
+              delete menuSearchList["menu104"];
+          }  
+          } 
+if (flashMeshCheckObj) {
+if(flashMeshCheckObj.value == "1"){
+    delete menuSearchList["menu127"];
+}  
+} 
+
+if (allotObj) {
+if(allotObj.value == "1"){
+    delete menuSearchList["menu129"];
+}  
+} 
+
+if (meshconfObj) {
+if(meshconfObj.value == "1"){
+    delete menuSearchList["menu128"];
+}  
+} 
+
+if (jma24Obj) {
+if(jma24Obj.value == "1"){
+    delete menuSearchList["menu2"];
+    delete menuSearchList["menu6"];
+    delete menuSearchList["menu7"];
+    delete menuSearchList["menu8"];
+    delete menuSearchList["menu72"];
+    delete menuSearchList["menu73"];
+    delete menuSearchList["menu24"];
+    delete menuSearchList["menu70"];
+    delete menuSearchList["menu117"];
+    delete menuSearchList["menu28"];
+    delete menuSearchList["menu25"];
+    delete menuSearchList["menu127"];
+    delete menuSearchList["menu22"];
+    delete menuSearchList["menu49"];
+    delete menuSearchList["menu50"];
+    delete menuSearchList["menu53"];
+    delete menuSearchList["menu30"];
+    delete menuSearchList["menu31"];
+    delete menuSearchList["menu114"];
+    delete menuSearchList["menu32"];
+    delete menuSearchList["menu33"];
+    delete menuSearchList["menu103"];
+    delete menuSearchList["menu36"];
+    delete menuSearchList["menu37"];
+    delete menuSearchList["menu38"];
+    delete menuSearchList["menu39"];
+    delete menuSearchList["menu59"];
+    delete menuSearchList["menu60"];
+    delete menuSearchList["menu61"];
+    delete menuSearchList["menu90"];
+    delete menuSearchList["menu78"];
+    delete menuSearchList["menu105"];
+    delete menuSearchList["menu63"];
+    delete menuSearchList["menu76"];
+    delete menuSearchList["menu23"];
+    delete menuSearchList["menu89"];
+    delete menuSearchList["menu125"];
+    delete menuSearchList["menu66"];
+    delete menuSearchList["menu79"];
+    delete menuSearchList["menu43"];
+    delete menuSearchList["menu68"];
+    delete menuSearchList["menu69"];
+    delete menuSearchList["menu58"];
+    delete menuSearchList["menu70"];
+    delete menuSearchList["menu71"];
+    delete menuSearchList["menu62"];
+    delete menuSearchList["menu123"];
+    delete menuSearchList["menu84"];
+    delete menuSearchList["menu91"];
+    delete menuSearchList["menu121"];
+    delete menuSearchList["menu122"];
+    delete menuSearchList["menu82"];
+    delete menuSearchList["menu80"];
+    delete menuSearchList["menu54"];
+    delete menuSearchList["menu48"];
+    delete menuSearchList["menu41"];
+    delete menuSearchList["menu42"];
+    delete menuSearchList["menu35"];
+    delete menuSearchList["menu86"];
+    delete menuSearchList["menu87"];
+    delete menuSearchList["menu64"];
+    delete menuSearchList["menu75"];
+    delete menuSearchList["menu113"];
+    delete menuSearchList["menu118"];
+    delete menuSearchList["menu9"];
+    delete menuSearchList["menu10"];
+    delete menuSearchList["menu11"];
+    delete menuSearchList["menu12"];
+    delete menuSearchList["menu16"];
+    delete menuSearchList["menu17"];
+    delete menuSearchList["menu18"];
+    delete menuSearchList["menu19"];
+    delete menuSearchList["menu20"];
+    delete menuSearchList["menu21"];
+    delete menuSearchList["menu26"];
+    delete menuSearchList["menu27"];
+    delete menuSearchList["menu56"];
+    delete menuSearchList["menu77"];
+    delete menuSearchList["menu81"];
+    delete menuSearchList["menu88"];
+  	delete menuSearchList["menu92"];
+    delete menuSearchList["menu102"];
+    delete menuSearchList["menu126"];
+    delete menuSearchList["menu128"];
+    delete menuSearchList["menu131"];
+    delete menuSearchList["menu132"];
+    delete menuSearchList["menu104"];
+  	delete menuSearchList["menu106"];
+  	delete menuSearchList["menu110"];
+    delete menuSearchList["menu111"];
+    delete menuSearchList["menu112"];
+    delete menuSearchList["menu115"];
+    delete menuSearchList["menu29"];
+    delete menuSearchList["menu55"];
+    delete menuSearchList["menu126"];
+    delete menuSearchList["menu128"];
+    delete menuSearchList["menu131"];
+    delete menuSearchList["menu132"];
+  }
+    else if(jma24Obj.value == "2"){
+    delete menuSearchList["menu2"];
+    delete menuSearchList["menu6"];
+    delete menuSearchList["menu7"];
+    delete menuSearchList["menu8"];
+    delete menuSearchList["menu72"];
+    delete menuSearchList["menu73"];
+    delete menuSearchList["menu70"];
+    delete menuSearchList["menu117"];
+    delete menuSearchList["menu127"];
+    delete menuSearchList["menu22"];
+    delete menuSearchList["menu49"];
+    delete menuSearchList["menu50"];
+    delete menuSearchList["menu53"];
+    delete menuSearchList["menu30"];
+    delete menuSearchList["menu31"];
+    delete menuSearchList["menu114"];
+    delete menuSearchList["menu32"];
+    delete menuSearchList["menu33"];
+    delete menuSearchList["menu103"];
+    delete menuSearchList["menu36"];
+    delete menuSearchList["menu37"];
+    delete menuSearchList["menu38"];
+    delete menuSearchList["menu39"];
+    delete menuSearchList["menu59"];
+    delete menuSearchList["menu60"];
+    delete menuSearchList["menu61"];
+    delete menuSearchList["menu90"];
+    delete menuSearchList["menu78"];
+    delete menuSearchList["menu105"];
+    delete menuSearchList["menu63"];
+    delete menuSearchList["menu76"];
+    delete menuSearchList["menu23"];
+    delete menuSearchList["menu89"];
+    delete menuSearchList["menu125"];
+    delete menuSearchList["menu66"];
+    delete menuSearchList["menu79"];
+    delete menuSearchList["menu68"];
+    delete menuSearchList["menu69"];
+    delete menuSearchList["menu58"];
+    delete menuSearchList["menu70"];
+    delete menuSearchList["menu71"];
+    delete menuSearchList["menu62"];
+    delete menuSearchList["menu123"];
+    delete menuSearchList["menu84"];
+    delete menuSearchList["menu91"];
+    delete menuSearchList["menu121"];
+    delete menuSearchList["menu122"];
+    delete menuSearchList["menu82"];
+    delete menuSearchList["menu80"];
+    delete menuSearchList["menu54"];
+    delete menuSearchList["menu48"];
+    delete menuSearchList["menu41"];
+    delete menuSearchList["menu42"];
+    delete menuSearchList["menu35"];
+    delete menuSearchList["menu86"];
+    delete menuSearchList["menu87"];
+    delete menuSearchList["menu64"];
+    delete menuSearchList["menu75"];
+    delete menuSearchList["menu113"];
+    delete menuSearchList["menu118"];
+    delete menuSearchList["menu9"];
+    delete menuSearchList["menu10"];
+    delete menuSearchList["menu11"];
+    delete menuSearchList["menu12"];
+    delete menuSearchList["menu16"];
+    delete menuSearchList["menu17"];
+    delete menuSearchList["menu18"];
+    delete menuSearchList["menu19"];
+    delete menuSearchList["menu20"];
+    delete menuSearchList["menu21"];
+    delete menuSearchList["menu26"];
+    delete menuSearchList["menu27"];
+    delete menuSearchList["menu56"];
+    delete menuSearchList["menu77"];
+    delete menuSearchList["menu81"];
+    delete menuSearchList["menu88"];
+  	delete menuSearchList["menu92"];
+    delete menuSearchList["menu102"];
+    delete menuSearchList["menu104"];
+    delete menuSearchList["menu115"];
+    delete menuSearchList["menu29"];
+    delete menuSearchList["menu55"];        
+    delete menuSearchList["menu128"];
+    delete menuSearchList["menu131"];
+    delete menuSearchList["menu132"];
+    }
+  else{
+    delete menuSearchList["menu130"];
+  }
+} 
+/* remove wan port type in menu search for JCO & JCE starts */       
+		if( hgwModelName == 0){
+			delete menuSearchList["menu92"];
+		}
+/* remove wan port type in menu search for JCO & JCE ends */
+/* remove 5Ghz pages in menu search for JCO110 & HG260ES starts*/       
+		if( (hgwModelName == 2) || (hgwModelName == 3)){
+			delete menuSearchList["menu110"];
+			delete menuSearchList["menu106"];
+		}
+/* remove 5Ghz pages in menu search for JCO110 & HG260ES ends*/       
+/* remove Wan Port pages in menu search for HG260ES starts*/
+		if( hgwModelName == 3){
+			delete menuSearchList["menu92"];
+        }
+/* remove Wan Port pages in menu search for HG260ES ends*/
+/* changes for 51744 starts */   
+if( gopnStatus == "1"){
+  delete menuSearchList["menu74"];
+    }    
+/* changes for 51744 ends */   
+/* added changes for device specific starts */
+if(deviceSpecificVal == "IN"){
+delete menuSearchList["menu64"];
+delete menuSearchList["menu75"];
+delete menuSearchList["menu102"];
+delete menuSearchList["menu106"];
+delete menuSearchList["menu110"];
+delete menuSearchList["menu111"];
+delete menuSearchList["menu112"];
+delete menuSearchList["menu123"];
+} 
+if(deviceSpecificVal == "BR"){
+delete menuSearchList["menu88"];
+delete menuSearchList["menu102"];
+delete menuSearchList["menu26"];
+delete menuSearchList["menu27"];
+delete menuSearchList["menu121"];
+delete menuSearchList["menu123"];
+} 
+if(deviceSpecificVal == "EC"){
+delete menuSearchList["menu88"];
+delete menuSearchList["menu102"];
+delete menuSearchList["menu26"];
+delete menuSearchList["menu27"];
+delete menuSearchList["menu121"];
+delete menuSearchList["menu123"];
+delete menuSearchList["menu104"];
+}
+if(deviceSpecificVal == "MR"){
+delete menuSearchList["menu102"];
+/* added changes for  63018 starts */
+delete menuSearchList["menu105"];
+/* added changes for 63018 ends */
+delete menuSearchList["menu106"];
+delete menuSearchList["menu110"];
+delete menuSearchList["menu111"];
+delete menuSearchList["menu112"];
+delete menuSearchList["menu121"];
+} 
+if (aludeviceSpecificObj) {
+if(aludeviceSpecificObj.value == "1"){
+delete menuSearchList["menu106"];
+delete menuSearchList["menu110"];
+delete menuSearchList["menu121"];
+}
+}
+/* Added chnages for HG261GU starts */
+if (hgguDeviceSpecfic) {
+if(hgguDeviceSpecfic.value == "1"){
+delete menuSearchList["menu24"];
+delete menuSearchList["menu25"];
+delete menuSearchList["menu28"];
+delete menuSearchList["menu29"];
+delete menuSearchList["menu66"];
+delete menuSearchList["menu84"];
+delete menuSearchList["menu102"];
+delete menuSearchList["menu105"];
+delete menuSearchList["menu117"];
+delete menuSearchList["menu104"];
+delete menuSearchList["menu106"];
+delete menuSearchList["menu110"];
+delete menuSearchList["menu111"];
+delete menuSearchList["menu112"];
+delete menuSearchList["menu4"];
+delete menuSearchList["menu5"];
+delete menuSearchList["menu64"];
+delete menuSearchList["menu75"];
+delete menuSearchList["menu90"];
+delete menuSearchList["menu23"];
+delete menuSearchList["menu68"];
+delete menuSearchList["menu69"];
+delete menuSearchList["menu55"];
+delete menuSearchList["menu43"];
+delete menuSearchList["menu20"];
+delete menuSearchList["menu19"];
+delete menuSearchList["menu21"];
+delete menuSearchList["menu58"];
+delete menuSearchList["menu54"];
+delete menuSearchList["menu121"];
+}
+}
+/* Added changes for HG261GU ends */
+/* added changes to hide DSCP To 802.1P Mapping starts */
+if (hideEthernetAll) {
+  if(hideEthernetAll.value == "1"){
+	delete menuSearchList["menu113"];
+  }
+}
+/* added changes to hide DSCP To 802.1P Mapping Ends */
+
+/* added changes for device specific ends */
+/* added changes for 59615 & 61681 starts */
+delete menuSearchList["menu19"];
+delete menuSearchList["menu20"];
+delete menuSearchList["menu21"];
+/* added changes for 59615 & 61681 ends */
+/* added changes for 61083 starts */
+delete menuSearchList["menu74"];
+/* added changes for 61083 ends */
+/* added changes to show ap Group name for wifi Rural area  starts */
+if (wifiRuralCheck) {
+  if(wifiRuralCheck.value == "0"){
+	delete menuSearchList["menu117"];
+  }
+}
+/* added changes to show ap Group name for wifi Rural area Ends */
+if (jco2031_check) {
+  if(jco2031_check.value == "1"){
+  delete menuSearchList["menu26"];
+  delete menuSearchList["menu27"];
+  delete menuSearchList["menu88"];
+  delete menuSearchList["menu120"];
+  }
+}
+
+          for (spIndex = 0; spIndex < splitValues.length; spIndex++) {
+
+            if (jQuery.inArray(key,selectedKeys) == -1) {             
+
+              if (keyName.indexOf(splitValues[spIndex]) != -1 || keyName1.indexOf(splitValues[spIndex]) != -1) {
+            
+               selectedKeys.push(key);
+                var liObj = createListObject(fldObj[key]);
+                divObj.appendChild(liObj);
+              }
+            } 
+         }
+        }
+    }
+    if (divObj.hasChildNodes()) {
+        setFirstAnchorClass();
+        var lastNodeObj = divObj.lastChild;
+        setClassName(lastNodeObj, 'menuLastChild');
+    }
+}
+
+/***************************************************************************
+ * setClassName - Sets the class name of an object
+ *
+ * This routine sets the class name of a given object to a given class name.
+ *
+ * @param: fldObj - Object whose class has to be set
+ *           styleValue - Class name to be set
+ * @return: NONE
+ */
+function setClassName(fldObj, styleValue){
+    fldObj.className = styleValue;
+}
+
+/***************************************************************************
+ * createListObject - Creates a list object
+ *
+ * This routine created a list object with an anchor object as its child.
+ *
+ * @param: fldObj - Object to be referenced to
+ * @return: Object
+ */
+function createListObject(fldObj){
+    var listObj = document.createElement("li");
+    listObj.setAttribute("id", 'menuLi' + indexVal);
+    indexVal++;
+    var anchorObj = document.createElement("a");
+    anchorObj.setAttribute("href", "platform.cgi?page="+fldObj.hrefAttrLink);
+    anchorObj.innerHTML = fldObj.mainMenu + ' <span class="menuSpanArrow">&#187;</span> ' + fldObj.secondLevelMenu;
+    anchorObj.setAttribute("oncontextmenu", "return false;");  
+    anchorObj.onclick = function(){
+        return clickOnLink(fldObj.secondLevelMenu);
+    };
+    anchorObj.onmouseover = onMouseOverFunc;
+    anchorObj.onmouseout = onMouseOutFunc;
+    listObj.appendChild(anchorObj);
+    return listObj;
+}
+
+/***************************************************************************
+ * clickOnLink - Set the value in the search field
+ *
+ * This routine sets the selected link's text as value in the Search field.
+ *
+ * @param: setValue - Value to be set for an object
+ * @return: TRUE
+ */
+function clickOnLink(setValue){
+    var fldObj = document.getElementById('menu1');
+    fldObj.value = setValue;
+    return true;
+}
+
+/***************************************************************************
+ * clearSearchList - Clears the search list
+ *
+ * This routine clears the search list existing in the div object.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function clearSearchList(){
+    divObj.innerHTML = "";
+    divObj.className = "hide";
+}
+
+/***************************************************************************
+ * autoCompleteSearch - Searches for the list of menus
+ *
+ * This routine searches for the menu list matching the entered values.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function autoCompleteSearch(){
+    var fldObj = document.getElementById('menu1');
+    clearSearchList();
+    var fldObjVal = convertToLowerCase(fldObj.value);
+    indexVal = 0;
+    if (fldObjVal.length > 1) {
+        searchEnteredValue(fldObjVal, menuSearchList);
+    }
+}
+
+/***************************************************************************
+ * setKeyFunction - Calls functions beased on the key stroke
+ *
+ * This routine gets the char code of the key stroke and calls its
+ * respective funcion.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function setKeyFunction(e){
+    var key;
+    divObj = document.getElementById('menuList');
+    document.getElementById('menuList').style.display="block";
+    document.getElementById('menuList').style.boxShadow="2px 4px 6px #6a6a6a";
+    if (!divObj) {
+     return false;
+    }
+    if (!e) 
+        var e = window.event;
+    (e.keyCode) ? key = e.keyCode : key = e.which;
+    if (key == 40) {
+        if (divObj != null || divObj.innerHTML != "") {
+            setClassOnKeyDown();
+        }
+    }
+    if (key == 38) {
+        if (divObj != null || divObj.innerHTML != "") {
+            setClassOnKeyUp();
+        }
+    }
+    if (key == 13) {
+        if (divObj != null || divObj.innerHTML != "") {
+            setFuncOnKeyEnter();
+        }
+    }
+    if ((key >= 97 && key <= 122) || (key >= 65 && key <= 90) || key == 8 || key == 46) {
+        autoCompleteSearch();
+    }
+}
+
+/***************************************************************************
+ * getSelectedMenuIndex - Returns the index of the menu highlighted
+ *
+ * This routine returns the index of the menu highlighted in the search list.
+ *
+ * @param: NONE
+ * @return: Index value
+ */
+function getSelectedMenuIndex(){
+    var arrObj = divObj.getElementsByTagName('a');
+    for (var i = 0; i < arrObj.length; i++) {
+        if (arrObj[i].className == "menu-selected") {
+            return i;
+        }
+    }
+    return -1;
+}
+
+/***************************************************************************
+ * getNoOfAnchorObjs - Returns the length of the object
+ *
+ * This routine returns the length of the array object.
+ *
+ * @param: NONE
+ * @return: Integer value
+ */
+function getNoOfAnchorObjs(){
+    var arrObj = divObj.getElementsByTagName('a');
+    return arrObj.length;
+}
+
+/***************************************************************************
+ * setAnchorObjClass - Sets class for an object
+ *
+ * This routine sets the class for an object.
+ *
+ * @param: cntNo - Index of the menu to be set
+ *         anchorLength - Length of an object
+ *         clsName - Class name to be set to
+ * @return: NONE
+ */
+function setAnchorObjClass(cntNo, anchorLength, clsName){
+    if (cntNo >= anchorLength) {
+        cntNo = anchorLength - 1;
+    }
+    if (cntNo < 0) {
+        cntNo = 0;
+        clsName = "menu-unselected";
+    }
+    var prevLiObj = document.getElementById('menuLi' + cntNo);
+    if (prevLiObj) {
+        var anchObj = prevLiObj.firstChild;
+        setClassName(anchObj, clsName);
+    }
+}
+
+/***************************************************************************
+ * setFirstAnchorClass - Sets class for the first anchor object
+ *
+ * This routine sets the class for the first anchor object.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function setFirstAnchorClass(){
+    divObj.className = "menuSearchTf1";
+    var countNo = getSelectedMenuIndex();
+    if (countNo < 0) {
+        var liObj = divObj.firstChild;
+        var anchObj = liObj.firstChild;
+        //setClassName (anchObj, "menu-selected");
+    }
+}
+
+/***************************************************************************
+ * setClassOnKeyUp - Action to be performed on key up stroke
+ *
+ * This routine sets the class names of the objects on key up stroke.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function setClassOnKeyUp(){
+    var countNo = getSelectedMenuIndex();
+    if (countNo < 0) {
+        clearSearchList();
+    }
+    else {
+        var noOfAnchors = getNoOfAnchorObjs();
+        setAnchorObjClass(countNo, noOfAnchors, "menu-unselected");
+        setAnchorObjClass((countNo - 1), noOfAnchors, "menu-selected");
+    }
+}
+
+/***************************************************************************
+ * setClassOnKeyDown - Action to be performed on key down stroke
+ *
+ * This routine sets the class names of the objects on key down stroke.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function setClassOnKeyDown(){
+    var countNo = getSelectedMenuIndex();
+    var noOfAnchors = getNoOfAnchorObjs();
+    setAnchorObjClass(countNo, noOfAnchors, "menu-unselected");
+    setAnchorObjClass((countNo + 1), noOfAnchors, "menu-selected");
+}
+
+/***************************************************************************
+ * setFuncOnKeyEnter - Action to be performed on key enter stroke
+ *
+ * This routine leads to the respective page based on the link of the
+ * highlighted object on key enter stroke.
+ *
+ * @param: NONE
+ * @return: NONE
+ */
+function setFuncOnKeyEnter(){
+    var countNo = getSelectedMenuIndex();
+    var liObj = document.getElementById('menuLi' + countNo);
+    if (liObj) {
+        var anchObj = liObj.firstChild;
+        location.href = anchObj.href;
+    }
+}
+
+var onMouseOverFunc = function(){
+    setClassName(this, 'menu-selected');
+};
+var onMouseOutFunc = function(){
+    setClassName(this, 'menu-unselected');
+};

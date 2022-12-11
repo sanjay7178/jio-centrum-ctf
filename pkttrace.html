@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://192.168.29.1/platform.cgi?page=diagnosticsPtrace.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ <meta http-equiv="Content-Language" content="en-us">
+ <title>Jio Centrum Home Gateway : </title>
+ <!--
+ Copyright (c) 2017-2018 TeamF1 networks Pvt. Ltd. (www.TeamF1networks.com)
+ All rights reserved.
+-->
+<link rel="shortcut icon" href="./pkttrace_files/logo.png" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/style.css">
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/buttons.css">
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/menu.css">
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/table.css">
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/theme.css">
+<link rel="stylesheet" type="text/css" href="./pkttrace_files/jquery-ui-1.8.4.custom.css">
+<script type="text/javascript" language="javascript" src="./pkttrace_files/jquery-1.8.0.min.js.download"></script>  
+<!-- clickJacking control -->
+<script>
+       if(top.location.hostname != self.location.hostname) {
+           top.location = self.location; 
+       }
+</script>
+               
+</head>
+<body data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+<div class="container">
+<div class="nav-side-menu">
+            <div class="logo"><img src="./pkttrace_files/logo.png" width="125" height="125">
+    </div>
+    <ul id="accordion" oncontextmenu="return false;">
+        
+         
+	
+        	<li id="tf1_hid_dashboard"><a href="javascript:void(0)" onclick="gotoLinks(&#39;dashboard.html&#39;)" id="mainMenu1">DASHBOARD</a></li>
+	
+                               
+        <li><a href="javascript:void(0)" id="mainMenu2">STATUS</a>
+            <ul class="submenu">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;deviceStatus.html&#39;)" id="tf1_status_devStatus"><span>›</span>Device Status</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;deviceStatistics.html&#39;)" id="tf1_status_devStatistics"><span>›</span>Device Statistics</a></li>
+                                  
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;lanDhcpLeasedClients.html&#39;)" id="tf1_status_lanDhcpLeasedClients"><span>›</span>LAN Clients</a></li>
+    
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;wirelessStatistics.html&#39;)" id="tf1_status_wirelessStatistics"><span>›</span>WLAN Statistics</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;wirelessClients.html&#39;)" id="tf1_status_wirelessClients"><span>›</span>WLAN Clients</a></li>
+		
+		
+				<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;meshTopology.html&#39;)" id="tf1_status_meshClients"><span>›</span>Mesh Network</a></li>
+		
+		
+		
+		</ul>
+        	</li>
+                                        
+        <li><a href="javascript:void(0)" id="mainMenu3">NETWORK</a>
+            <ul class="submenu">
+              
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;lanIPv4Config.html&#39;)" id="tf1_network_lanIPv4Config"><span>›</span>LAN</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;accessPoints.html&#39;)" id="tf1_network_accessPoints"><span>›</span>Wireless</a></li>
+		
+              
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;routingMode.html&#39;)" id="tf1_network_routingMode"><span>›</span>Routing</a></li>
+            </ul>
+        </li>
+        <li><a href="javascript:void(0)" id="mainMenu4">SECURITY</a>
+            <ul class="submenu">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;defaultPolicy.html&#39;)" id="tf1_security_defaultPolicy"><span>›</span>Firewall</a></li>
+		<!-- <li><a href="javascript:void(0)" onclick="gotoLinks('alg.html')" id="tf1_security_alg"><span>&rsaquo;</span>ALG</a> </li> -->
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;contentFiltering.html&#39;)" id="tf1_security_contentFiltering"><span>›</span>Content Filtering</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;vpnPassthrough.html&#39;)" id="tf1_security_vpnPassthrough"><span>›</span>VPN Passthrough</a> </li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;specificAttacks.html&#39;)" id="tf1_security_specificAttacks"><span>›</span>Attack Checks</a></li>
+		
+            </ul>
+        </li>
+        
+        
+        <li><a href="javascript:void(0)" id="mainMenu5" class="active">ADMINISTRATION</a>
+            <ul class="submenu" style="display: block;">
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;users.html&#39;)" id="tf1_administration_users"><span>›</span>Users</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;webManagement.html&#39;)" id="tf1_administration_webManagement"><span>›</span>Web Management</a></li>
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;backupRestore.html&#39;)" id="tf1_administration_backupRestore"><span>›</span>Maintenance</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;diagnostics.html&#39;)" id="tf1_administration_diagnostics" class="activeChild"><span>›</span>Diagnostics</a></li>
+        
+        
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;dateAndTime.html&#39;)" id="tf1_administration_dateAndTime"><span>›</span>Date &amp; Time</a></li>									
+            </ul>
+        </li>
+        
+                               
+        <li><a href="javascript:void(0)" id="mainMenu6">ADVANCED</a>
+            <ul class="submenu">
+                                            
+		
+		<li>
+		<a href="javascript:void(0)" onclick="gotoLinks(&#39;accountingStatus.html&#39;)" id="tf1_advanced_accountingStatus"><span>›</span>Status</a></li>
+		
+			
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;serverSettings.html&#39;)" id="tf1_advanced_serverSettings"><span>›</span>DMS Server Settings</a> </li> 
+		
+        		
+        
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;bridgeMode.html&#39;)" id="tf1_advanced_maptConfiguration"><span>›</span>Network</a></li>
+		    
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;disks.html&#39;)" id="tf1_advanced_remoteSysLogSetup"><span>›</span>Administration</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;bandwidthProfiles.html&#39;)" id="tf1_advanced_bandwidthProfiles"><span>›</span>Bandwidth Profiles</a></li>
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;trafficSelectors.html&#39;)" id="tf1_advanced_trafficSelectors"><span>›</span>Traffic Selectors</a></li>
+		
+		
+		<li><a href="javascript:void(0)" onclick="gotoLinks(&#39;schedules.html&#39;)" id="tf1_advanced_schedules"><span>›</span>Schedules</a> </li>
+		 
+		<!-- <li><a href="javascript:void(0)" onclick="gotoLinks('ftpServer.html')" id="tf1_advanced_ftpServer"><span>&rsaquo;</span>FTP Server</a> </li> -->
+		
+        
+    
+            </ul>
+
+        </li>
+        
+        
+    </ul>
+
+<div class="firmwareInfo">
+
+<p>Firmware Version<br>
+<span>SRCMTF1_JCO4032_R2.41</span></p>
+<p>Serial Number<br>
+<span>RSTOTGG00018583</span></p>
+</div>
+</div>
+
+<div id="main">
+  
+<div class="content-topBlock">
+ 
+<div class="dropdown">
+
+<p class="dropbtn"> <label id="lblLoggedinUser" title="admin">Hi,
+				
+				admin					
+				
+
+			</label>
+			 (admin) <span></span></p> 
+
+  <div class="dropdown-content">
+    <a class="logOut FR" id="tf1_logoutAnchor" href="javascript:void(0)" onclick="closeConfirmForm()">Logout</a>
+  </div>
+</div>
+   <a class="btnHelp" id="tf1_helpAnchor" onclick="openHelpForm()">?</a> 
+ 
+    <div id="demo-2" class="rilSearch">
+	<input type="text" id="menu1" class="searchMenu">
+          <ul id="menuList" class="hide" style="display: block; box-shadow: rgb(106, 106, 106) 2px 4px 6px;"></ul>
+    </div>
+
+</div>
+<div class="pageLinks">
+    <div class="breadcrumb FL">
+        <div id="breadCrumb">Administration<span>»</span>Diagnostics<span>»</span>Capture Packets</div>
+    </div>
+   
+<!-- <a class="logOut FR" href="?page=index.html">Disconnect</a> -->
+</div>
+ <div id="tf1_helpOverlay" class="configDialogMask"></div>
+        <form name="tf1_helpForm" id="tf1_helpForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">  
+<input type="hidden" name="token" value="joogeighaipaeleebiesealeiyihahbinoocoofiepeepeedaixaevayeiphaede">			
+		  
+            <div class="configDialogHelp" id="tf1_helpDialog">
+	    <div class="topBg"><div class="helpText">Help</div><a id="helpBtnClose" title="Close" href="javascript:void(0)">X</a></div>
+                 <div id="tf1_helpContent" class="helpContentArea">
+                
+            </div>
+            </div>
+        </form>
+<div id="tf1_logOutOverlay" class="configDialogMask"></div>
+        <form name="tf1_logOutForm" id="tf1_logOutForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">   
+		  <input type="hidden" name="token" value="joogeighaipaeleebiesealeiyihahbinoocoofiepeepeedaixaevayeiphaede">
+            <div class="configLogout" id="tf1_logOutDialog">
+	     <a id="logoutBtnClose" class="logoutBtnClose" title="Close" href="javascript:void(0)">X</a>
+                 <div id="tf1_logOutContent" class="logOutContentArea">
+		<p>Logout<span>Are you sure want to logout?</span></p>
+				<div class="logOutRow">
+				 <a id="logoutBtnClose" title="Cancel" href="javascript:void(0)" class="cancelBtn">Cancel</a>
+				 <a href="http://192.168.29.1/platform.cgi?page=index.html">OK</a>
+                                        </div>
+            </div>
+            </div>
+        </form>
+ 
+
+<div id="tf1_forcedLoginOverlay" class="configDialogMask"></div>
+        <form name="tf1_forcedLoginForm" id="tf1_forcedLoginForm" action="http://192.168.29.1/platform.cgi" method="post">
+            <input type="hidden" name="thispage" id="thispage" value="">   
+		  <input type="hidden" name="token" value="joogeighaipaeleebiesealeiyihahbinoocoofiepeepeedaixaevayeiphaede">
+            <div class="forcedLogin" id="tf1_forcedLoginDialog">
+	     <a id="forcedLoginClosea" class="logoutBtnClose" title="Close" href="http://192.168.29.1/platform.cgi?page=index.html">X</a>
+                 <div id="tf1_forcedLoginContent" class="logOutContentArea">
+		<p>Configuration Manager Forced Login<span></span></p>
+<input type="hidden" name="loginSession.username" id="tf1_loggedInUserName" value="">
+				<div class="btnRow" align="center">
+				  
+				 <a href="javascript:void(0)" onclick="continueValidate()" class="continue" align="center">Continue</a>
+                                        </div>
+            </div>
+            </div>
+        </form>
+<input type="hidden" id="tf1_hidden_hgwModelName" value="1"> 
+<!-- changes for 51744 starts -->
+<input type="hidden" id="tf1_hidden_gponStatus" value="1"> 
+<!-- changes for 51744 ends -->
+<!-- added changes for device specific starts -->
+
+
+
+
+<input type="hidden" id="tf1_hidden_deviceSpecificCheck" value="EC"> 
+
+
+<!-- added changes for device specific ends -->
+<!-- added for HW_HG261GU starts -->
+
+<!-- added for HW_HG261GU Ends -->
+<!--  added changes to hide DSCP To 802.1P Mapping starts  -->
+
+<!--  added changes to hide DSCP To 802.1P Mapping Ends  -->
+<!--added changes to show ap Group name for wifi Rural area starts  -->
+
+<!--added changes to show ap Group name for wifi Rural area ends -->
+<!--  added changes to hide JCO2031 GUI Modification starts  -->
+
+<!--  added changes to hide JCO2031 GUI Modification Ends  -->
+
+  <input type="hidden" id="tf1_hidden_ae" value="0"> 
+  
+
+
+
+<input type="hidden" id="tf1_hidden_mesh_enabled" value="1"> 
+
+
+<!-- if ((util.fileExists("/pfrm2.0/BRCM_MESH_ENABLED")))  then ?> -->
+<!--input type="hidden" id="tf1_hidden_mesh_config_disabled" value="1"> --> 
+<!--lua end ?> -->
+
+
+  
+
+<input type="hidden" id="tf1_hidden_flash_mesh_enabled" value="1"> 
+
+
+<input type="hidden" id="tf1_hidden_jma24" value="0"> 
+
+
+
+<input type="hidden" id="tf1_hidden_smartCableHeader" value="1"> 
+
+
+                             
+<div class="msgInfo">
+  	<p>Packet tracing stopped.<br> Click the "Download" button to view the capture logs.</p>
+</div>
+
+<div class="contentMidArea">		
+	 <div class="mainContent">
+                            <h1>Capture Packets</h1>
+
+                                <div align="left">
+                      <form name="tf1_frmdiagnostics1" id="tf1_frmdiagnostics" method="post" action="http://192.168.29.1/platform.cgi?page=diagnosticsPtrace.html">
+									<input type="hidden" name="token" value="joogeighaipaeleebiesealeiyihahbinoocoofiepeepeedaixaevayeiphaede">
+                                    <input type="hidden" name="thispage" value="diagnosticsPtrace.html">
+                                        
+                                        <div class="configRow">
+                                            <label>
+                                                Select Network  
+                                            </label>
+                                            <select size="1" name="networkName" class="txt1" id="selNetwork">
+                    
+            <option value="Internet">WAN</option>
+
+            
+            <option value="Local">LAN</option>
+
+            
+				</select>  
+
+		
+
+                                        </div>
+                                        <div class="break" id="break_div"> &nbsp; </div>
+                                       <div class="submitRow">                                           
+                                           <input type="submit" value="Start" id="startButton" name="button.start.diagnosticsPtrace" class="btnSubmit" title="Start">
+                                           <input type="submit" value="Stop" id="stopButton" name="button.stop.diagnosticsPtrace" class="btnSubmit" title="Stop" disabled="">
+                                           <input type="button" value="Download" id="downloadButton" class="btnSubmit" title="Download" onclick="window.location='secret.cap';">
+                                           </div>  
+                                        <div class="break" id="break_div"> &nbsp;  </div>
+                                    </form>
+                                  
+                                     
+                                </div>
+                            </div>
+                        </div>
+                     
+                        <div class="push">&nbsp;</div>      
+                        </div>
+                        <footer>
+	<div class="copyright"> © 2019 TeamF1, Inc. All Rights Reserved.</div>
+</footer>
+</div>
+<div id="tf1_pageLoadingOverLay" class="configOnloadDialogMask"></div>
+<div class="msgInfoLoading loadingDialog" id="tf1_pageLoadingMask">
+    <p> Loading Please wait..!</p>
+</div>
+<script type="text/javascript" language="javascript" src="./pkttrace_files/loadingStatus.js.download">
+</script>
+<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+			$("#accordion > li > a").click(function() {
+			       $(this).closest('li').siblings().find('a').removeClass('active').next('ul').slideUp(250);
+			       $(this).toggleClass("active").next('ul').slideToggle(250);
+			   });
+
+				window.onresize = function(event){
+					var leftPx = $(window).innerWidth()/2 - $(".configDialog").width()/2;
+					leftPx = Math.round(leftPx);
+					$(".configDialog").css('left',leftPx+'px');	
+				/* page loading mask starts */
+				var maskLeftPx = $(window).innerWidth()/2 - $("#tf1_pageLoadingMask").width()/2;
+				var maskHeightPx = $(window).innerHeight()/2 - $("#tf1_pageLoadingMask").height()/2;
+				maskLeftPx = Math.round(maskLeftPx);
+				maskHeightPx = Math.round(maskHeightPx);
+				$("#tf1_pageLoadingMask").css('left',maskLeftPx+'px');
+				 $("#tf1_pageLoadingMask").css('top',maskHeightPx+'px');
+					/* page loading mask ends */
+					//menusUlPositioning();
+					/* added changes to remove boxShadow for search box starts*/
+					document.getElementById('menuList').style.boxShadow="none";	
+					document.getElementById('menuList').style.display="none";		
+					/* added changes to remove boxShadow for search box ends*/
+			}	
+			});
+ 
+</script>
+
+<!--[if IE 9]>
+<script>
+	if(Function('/*@cc_on return 9===document.documentMode@*/')()){
+		var midAreadivs = document.getElementsByClassName('midArea');
+		if (midAreadivs.length > 0 ){
+			midAreadivs[0].style.setProperty('filter','none');
+		}
+	}
+</script>
+<![endif]-->
+<script type="text/javascript" language="javascript" src="./pkttrace_files/mgmt.js.download"></script>
+<script type="text/javascript" language="javascript" src="./pkttrace_files/mis.js.download"></script>
+<script type="text/javascript" language="javascript" src="./pkttrace_files/menu.js.download"> </script>
+<script language="JavaScript" src="./pkttrace_files/menuSearchList.js.download" type="text/javascript"></script>
+<script language="JavaScript" src="./pkttrace_files/menuSearch.js.download" type="text/javascript"></script>
+
+<script language="JavaScript" type="text/javascript">	
+		 	
+        	 $(document).ready(function(){
+             popDiagPtraceInit();
+                /* Help Section variables */
+			    helpSection = "diagPtrace";				
+                helpConfigFile = "administration.txt";
+
+                /* Header section javascript bindings */
+        	 	menuLoading();
+          		mmSel("mainMenu5",'tf1_administration_diagnostics');
+                getBreadCrumb(116);
+
+        	 });
+        
+ 
+           function changeButtonStatus (ptraceStatus, fileExist)
+           	{
+           	if (ptraceStatus == null)
+           		return false;
+           	switch (ptraceStatus)
+           		{
+           		case 1:	/* packet trace started */
+           			fieldStateChangeWr ('selNetwork startButton  downloadButton','','stopButton','');						
+           			break;
+           		case 2:	/* packet trace stopped */
+           			fieldStateChangeWr ('stopButton','','selNetwork startButton downloadButton','');
+                                if (fileExist == 1) {
+                                   fieldStateChangeWr ('','','downloadButton','');
+				} else {
+				   fieldStateChangeWr ('downloadButton','','','');
+			        }			 		     
+           		default:
+           			fieldStateChangeWr ('stopButton','','selNetwork startButton','');
+                                if (fileExist == 1) {
+                                   fieldStateChangeWr ('','','downloadButton','');
+				} else {
+				   fieldStateChangeWr ('downloadButton','','','');
+			        }				
+           			break;
+           		}
+           	return true;
+           	}
+           function popDiagPtraceInit ()
+           	{
+           	
+           	var ptStatus = 2;
+                var pFileExist = 1;
+           	if (ptStatus == null) return;
+           	return changeButtonStatus (parseInt (ptStatus , 10), parseInt (pFileExist , 10));
+           	}
+
+           </script> 
+    
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

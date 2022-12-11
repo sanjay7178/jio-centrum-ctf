@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<!-- saved from url=(0020)http://192.168.29.1/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jio Centrum Home Gateway : </title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://192.168.29.1/images/logo.png" type="image/x-icon">
+    <link href="./Jio Centrum Home Gateway __files/style.css" rel="stylesheet">
+ <link rel="stylesheet" type="text/css" href="./Jio Centrum Home Gateway __files/theme.css">
+<script type="text/javascript" language="javascript" src="./Jio Centrum Home Gateway __files/jquery-1.8.0.min.js.download"></script>
+    <!-- clickJacking control -->
+<script>
+       if(top.location.hostname != self.location.hostname) {
+           top.location = self.location; 
+       }
+</script>
+ 
+
+</head><body class="loginBody" data-new-gr-c-s-check-loaded="14.1026.0" data-gr-ext-installed="">
+      <div style="display: table; height: 100%; overflow: hidden;min-height: 100%; width: 980px; margin: 0 auto;">
+         <div style="display: table-cell; vertical-align: middle;width: 980px; margin: 0 auto;">
+           <div align="center" class="midWidth">
+ 
+<!-- 		<p  class="loginError"></p> -->
+ 
+ 
+ 		<div class="midOne">
+
+          <div class="loginForm logoBlock ">
+                <div class="loginLogo"><img src="./Jio Centrum Home Gateway __files/loginLogo.png" alt="Jio logo">
+                </div>
+                </div>
+            
+        </div>
+        <div class="midOne">
+ 
+
+	<input type="hidden" name="thispage" value="index.html">
+
+                <div class="loginForm">
+
+                    <div class="configRow">
+                        <label>User Name</label>
+                        <input type="text" value="" name="users.username" id="tf1_userName">
+                    </div>
+                    <div class="break">&nbsp;</div>
+                    <div class="configRow">
+                        <label>Password</label>
+                        <input type="Password" value="" name="users.password" id="tf1_password" onfocus="this.value=&#39;&#39;" maxlength="32" class="pwdFieldIndex">
+                        <a href="javascript:void(0)" class="eye1 showHideEye" id="showHide">&nbsp;</a>
+                    </div>
+                     
+                    <div class="break">&nbsp;</div>
+                    <div class="submitRow">
+<button type="submit" class="loginBtn" title="Login" value="Login" name="button.login.users.dashboard" onclick="return loginValidate()">Login</button>
+
+                    </div>
+                </div>  
+
+           
+        </div>
+           </div>
+         </div>
+       </div>
+
+ <div id="tf1_pageLoadingOverLay" class="configOnloadDialogMask"></div>
+<div class="msgInfoLoading loadingDialog" id="tf1_pageLoadingMask">
+    <p> Loading Please wait..!</p>
+</div>  
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+        });
+    </script>
+    <!--[if lt IE 9]><script src="js/excanvas.js"></script><![endif]--> 
+    <script type="text/javascript" language="javascript" src="./Jio Centrum Home Gateway __files/mis.js.download">	</script>
+    <script type="text/javascript" language="javascript" src="./Jio Centrum Home Gateway __files/textValidations.js.download"></script>
+    <script type="text/javascript" language="javascript" src="./Jio Centrum Home Gateway __files/loadingStatus.js.download"></script>
+    <script type="text/javascript" charset="utf-8">
+    function loginValidate()
+  {
+  	uname=sha256(document.getElementById('tf1_userName').value);
+  	passk=sha256(document.getElementById('tf1_password').value);
+  	const validuname='8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918';
+  	const validpsk='c75f28325cfa028ea13872f977a29e0e87c99a4f390fe260f24d7e1f05fb8d75';
+  	if(uname==validuname && passk==validpsk)
+  	{
+  		alert('Login success');
+  		window.location.replace('./dashboard.html');
+  	}
+  	else
+  	{
+  		alert('Incorrect credentials');
+  	}
+  	
+  }
+  
+  var sha256 = function sha256(ascii) {
+    function rightRotate(value, amount) {
+        return (value>>>amount) | (value<<(32 - amount));
+    };
+    
+    var mathPow = Math.pow;
+    var maxWord = mathPow(2, 32);
+    var lengthProperty = 'length'
+    var i, j; // Used as a counter across the whole file
+    var result = ''
+
+    var words = [];
+    var asciiBitLength = ascii[lengthProperty]*8;
+    
+    //* caching results is optional - remove/add slash from front of this line to toggle
+    // Initial hash value: first 32 bits of the fractional parts of the square roots of the first 8 primes
+    // (we actually calculate the first 64, but extra values are just ignored)
+    var hash = sha256.h = sha256.h || [];
+    // Round constants: first 32 bits of the fractional parts of the cube roots of the first 64 primes
+    var k = sha256.k = sha256.k || [];
+    var primeCounter = k[lengthProperty];
+    /*/
+    var hash = [], k = [];
+    var primeCounter = 0;
+    //*/
+
+    var isComposite = {};
+    for (var candidate = 2; primeCounter < 64; candidate++) {
+        if (!isComposite[candidate]) {
+            for (i = 0; i < 313; i += candidate) {
+                isComposite[i] = candidate;
+            }
+            hash[primeCounter] = (mathPow(candidate, .5)*maxWord)|0;
+            k[primeCounter++] = (mathPow(candidate, 1/3)*maxWord)|0;
+        }
+    }
+    
+    ascii += '\x80' // Append Ƈ' bit (plus zero padding)
+    while (ascii[lengthProperty]%64 - 56) ascii += '\x00' // More zero padding
+    for (i = 0; i < ascii[lengthProperty]; i++) {
+        j = ascii.charCodeAt(i);
+        if (j>>8) return; // ASCII check: only accept characters in range 0-255
+        words[i>>2] |= j << ((3 - i)%4)*8;
+    }
+    words[words[lengthProperty]] = ((asciiBitLength/maxWord)|0);
+    words[words[lengthProperty]] = (asciiBitLength)
+    
+    // process each chunk
+    for (j = 0; j < words[lengthProperty];) {
+        var w = words.slice(j, j += 16); // The message is expanded into 64 words as part of the iteration
+        var oldHash = hash;
+        // This is now the undefinedworking hash", often labelled as variables a...g
+        // (we have to truncate as well, otherwise extra entries at the end accumulate
+        hash = hash.slice(0, 8);
+        
+        for (i = 0; i < 64; i++) {
+            var i2 = i + j;
+            // Expand the message into 64 words
+            // Used below if 
+            var w15 = w[i - 15], w2 = w[i - 2];
+
+            // Iterate
+            var a = hash[0], e = hash[4];
+            var temp1 = hash[7]
+                + (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25)) // S1
+                + ((e&hash[5])^((~e)&hash[6])) // ch
+                + k[i]
+                // Expand the message schedule if needed
+                + (w[i] = (i < 16) ? w[i] : (
+                        w[i - 16]
+                        + (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15>>>3)) // s0
+                        + w[i - 7]
+                        + (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2>>>10)) // s1
+                    )|0
+                );
+            // This is only used once, so *could* be moved below, but it only saves 4 bytes and makes things unreadble
+            var temp2 = (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22)) // S0
+                + ((a&hash[1])^(a&hash[2])^(hash[1]&hash[2])); // maj
+            
+            hash = [(temp1 + temp2)|0].concat(hash); // We don't bother trimming off the extra ones, they're harmless as long as we're truncating when we do the slice()
+            hash[4] = (hash[4] + temp1)|0;
+        }
+        
+        for (i = 0; i < 8; i++) {
+            hash[i] = (hash[i] + oldHash[i])|0;
+        }
+    }
+    
+    for (i = 0; i < 8; i++) {
+        for (j = 3; j + 1; j--) {
+            var b = (hash[i]>>(j*8))&255;
+            result += ((b < 16) ? 0 : '') + b.toString(16);
+        }
+    }
+    return result;
+};
+  
+  function loginInit ()
+  {
+    var usrObj = document.getElementById ('tf1_userName');
+    if (!usrObj) return;
+    usrObj.focus ();
+  }
+
+      $(document).ready(function(){
+      
+/* Onload hide the status message if content is empty */	
+
+if ($(".midBg div.msgInfo p").length > 0 && $(".midBg div.msgInfo p").html() == '')
+          {
+              $(".midBg div.msgInfo").hide();
+          }
+if ($(".midBg div.msgError p").length > 0 && $(".midBg div.msgError p").html() == '')
+          {
+              $(".midBg div.msgError").hide();
+          }
+if ($(".midBg div.msgSuccess p").length > 0 && $(".midBg div.msgSuccess p").html() == '')
+          {
+              $(".midBg div.msgSuccess").hide();
+          }
+      
+loginInit();
+        
+    $('#tf1_password').on('keydown', function (event) {
+      var key = event.charCode || event.keyCode || event.which;
+        if (key === 8 || key === 46) {
+            $(this).val("");
+            return false;
+        }
+      });
+      $('#tf1_password').bind('copy paste cut drop', function (e) {
+        e.preventDefault();
+      });
+
+  });
+  
+    $('#showHide').on('click', function (event) {
+      if ($('#showHide').hasClass("eye1")) {
+          $('#showHide').removeClass("eye1");
+          $('#showHide').addClass("eye2");
+          document.getElementById("tf1_password").type = 'text';
+          
+      } else {
+          $('#showHide').removeClass("eye2");
+          $('#showHide').addClass("eye1");
+          document.getElementById("tf1_password").type = 'password';
+      }
+    });
+       
+        </script> 
+     <style>
+     
+     .midWidth {
+    width: 978px !important;
+    min-width: 978px !important;
+}
+
+     .configRow, .loginForm > .configRow{
+       padding: 0 5px;
+     }
+     .configRow > label{
+       font-weight: bold;
+     }
+
+     .loginForm  .configRow > label, .loginForm .configRow > p {
+         color: #404040;
+         float: left;
+         margin: 8px 0;
+         max-width: 100%;
+         min-width: 100%;
+         padding: 0 ;
+         text-align: left; 
+     }
+		 .loginForm  .configRow > label{
+       font-weight: normal;
+				margin: 8px 0 0 0;
+     }
+     .loginForm  .configRow > input, select, textarea {
+       border: none;
+       background: #edeeef;
+       color: #6A6A6A;
+       float: left;
+       height: 33px;
+       margin: 4px  0;
+       padding: 0 8px;
+       width: calc(100% - 16px);
+     }
+     .onlyHeight { height: 100%;}
+     .midWidth { min-width: 980px; width: 980px; margin:0 auto;  } /* With width property you can change middle area width to full screen! */
+     .midWidth2 { min-width: 600px; width: 600px; }
+
+     .loginBtn { background: #1ba99d; width: 100%; line-height: 30px; border-radius: 4px; color: #fff; font-weight: bold; border: none; cursor: pointer; display: block; text-align: center; text-decoration: none;}
+     .loginBtn:hover { color: rgba(255,255,255,0.5);}
+     .configRow > label, .configRow > p {
+         color: #404040;
+         float: left;
+         margin: 8px 0;
+         max-width: 30%;
+         min-width: 30%;
+         padding: 0 10px;
+         text-align: left; 
+     }
+     .configRow > p {
+       color: #6A6A6A;
+       letter-spacing: 1px;
+       min-width: 60%;
+     }
+
+</style>
+    
+    
+    
+</body></html>

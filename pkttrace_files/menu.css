@@ -1,0 +1,384 @@
+/*
+Copyright (c) 2012 TeamF1, Inc. (www.TeamF1.com)
+All rights reserved.
+Created on 1st Aug 2012 - suresh
+*/
+
+@charset "utf-8";
+no-js nav li:hover ul {
+    display: block;
+}
+.two {
+    /* box-shadow: 2px 4px 6px #6a6a6a;*/
+    
+    left: 198px !important;
+    top: 2px;
+    width: 196px;
+}
+.twoLast {
+    left: -200px !important;
+}
+.toLeft {
+    left: -200px !important;
+}
+.toRight {
+    left: 198px !important;
+}
+.menuone {
+    box-shadow: 4px 6px 8px #6a6a6a;
+    min-width: 196px;
+    top: 60px;
+    position: absolute;
+}
+nav {
+    clear: both;
+    height: 60px;
+    line-height: 60px;
+    margin: 0;
+    padding: 0;
+}
+nav ul {
+    padding: 0;
+    margin: 0;
+    z-index: 999;
+}
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    padding: 0;
+    width: 196px;
+}
+nav ul li a.firstLi {
+    border-radius: 10px 0 0 10px;
+}
+nav ul li a.lastLi {
+    border-radius: 0 10px 10px 0;
+}
+nav ul li a,
+nav ul li a.firstLi,
+nav ul li a.lastLi {
+    background: #FFFFFF url("../images/menu.png") no-repeat scroll right 0;
+    color: #50B6BF;
+    display: block;
+    height: 60px;
+    font-size: 16px;
+    line-height: 60px;
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+}
+nav ul li a.firstLiActive {
+    background: #50B6BF url("../images/menu.png") no-repeat scroll right -60px;
+    border-radius: 10px 0 0 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul li a.lastLiActive {
+    background: #50B6BF url("../images/menu.png") no-repeat scroll right -60px;
+    border-radius: 0 10px 10px 0;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a.active {
+    background: #50B6BF url("../images/menu.png") no-repeat scroll right -60px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul li:first-child a {
+    border-left: none;
+}
+nav ul li.end {
+    border-right: none;
+    border-bottom: 0 none;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 0 !important;
+}
+nav ul li.start {
+    border-left: none;
+}
+nav ul ul {
+    background: #FFFFFF;
+    border: 1px solid #E6E6E6;
+    border-radius: 10px;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 100%;
+    top: 60px;
+    width: 196px;
+}
+nav ul ul li {
+    width: 100%;
+    display: block;
+}
+nav ul ul li a {
+    background: none;
+    border-bottom: 1px solid #E6E6E6;
+    border-radius: 0;
+    color: #50B6BF;
+    display: block;
+    height: auto;
+    line-height: Normal;
+    margin: 0 !important;
+    padding: 15px 10px;
+    text-align: left
+}
+nav ul ul li.submain a span {
+    background: url("../images/menu.png") no-repeat scroll right -135px;
+}
+nav ul ul li.submain a:hover span {
+    background: url("../images/menu.png") no-repeat scroll right -195px;
+}
+nav ul ul li a:hover {
+    background: #50B6BF;
+    border-radius: 0;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+nav ul ul li:hover a span {
+    height: 45px;
+    width: 45px;
+}
+.main span {
+    color: #ccc;
+    float: right;
+    height: 60px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 2px;
+}
+nav ul li ul li a.begining:hover {
+    border-radius: 10px 10px 0 0;
+}
+nav ul li ul li a.closing {
+    border-bottom: none !important;
+}
+nav ul li ul li a.closing:hover {
+    border-radius: 0 0 10px 10px;
+}
+nav ul li ul li a.common:hover {
+    border-radius: 10px;
+}
+.submain span {
+    height: 30px;
+    top: 8px;
+    width: 30px;
+}
+/* for table right click menus */
+
+.toolTip {
+    min-width: 120px;
+}
+.toolTip > ul {
+    /*box-shadow: 2px 4px 6px #6a6a6a;*/
+    
+    padding: 0 !important;
+    border-radius: 4px;
+    border: 1px solid #d0d1d2 !important;
+}
+.toolTip > ul li > input[type=checkbox] {
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.toolTip > ul li:first-child:hover {
+    border-radius: 4px 4px 0 0;
+}
+.toolTip > ul li:last-child:hover {
+    border-radius: 0 0 4px 4px;
+}
+.toolTip > ul li#Menu {
+    line-height: 28px !important;
+}
+#editMenu,
+#deleteMenu,
+#disableMenu,
+#enableMenu,
+#exportMenu,
+#copyMenu,
+#startSyncMenu,
+#disconnectMenu,
+#detialsMenu,
+#applyMenu,
+#macFilterMenu,
+#statusMenu,
+#startMenu,
+#stopMenu,
+#launchMenu,
+#formatMenu,
+#installMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -484px transparent;
+    color: #404040 !important;
+    cursor: pointer !important;
+    padding-left: 30px !important;
+    line-height: 24px !important;
+}
+#editMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -481px transparent;
+}
+#deleteMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -545px transparent;
+}
+#disableMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -609px transparent;
+}
+#enableMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -577px transparent;
+}
+#exportMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -641px transparent;
+}
+#copyMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -673px transparent;
+}
+#startSyncMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -703px transparent;
+}
+#disconnectMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -735px transparent;
+}
+#detialsMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -513px transparent;
+}
+#applyMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -766px transparent;
+}
+#macFilterMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -451px transparent;
+}
+#statusMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -421px transparent;
+}
+#startMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -896px transparent;
+}
+#stopMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -799px transparent;
+}
+#launchMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -864px transparent;
+}
+#formatMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -830px transparent;
+}
+#installMenu {
+    background: url("../images/icons.png") no-repeat scroll -18px -863px transparent;
+}
+#Menu:hover,
+#editMenu:hover,
+#deleteMenu:hover,
+#disableMenu:hover,
+#enableMenu:hover,
+#exportMenu:hover,
+#copyMenu:hover,
+#startSyncMenu:hover,
+#disconnectMenu:hover,
+#detialsMenu:hover,
+#applyMenu:hover,
+#macFilterMenu:hover,
+#statusMenu:hover,
+#formatMenu:hover,
+#startMenu:hover,
+#stopMenu:hover,
+#launchMenu:hover,
+#installMenu:hover {
+    background-color: #1ba99d !important;
+    border: none !important;
+    color: #FFFFFF !important;
+}
+/* table right click menus end */
+/* menu search */
+
+.rilSearch {
+    margin: 10px 0 10px 10px;
+}
+.rilSearchText {
+    background: url("../images/search.png") no-repeat scroll right 10px center transparent;
+    border: transparent;
+    border-bottom: 1px solid #8a8a8a;
+    color: #50b6bf;
+    float: left;
+    height: 22px;
+    letter-spacing: 1px;
+    padding: 2px 26px 2px 4px;
+    width: 180px;
+}
+/* menu search end */
+/* for menu search */
+
+.menuSearchTf1 {
+    background: #FFFFFF;
+    /*border:1px solid #e6e6e6;*/
+    
+    box-shadow: none;
+    display: none;
+    list-style: outside none none;
+    margin-top: 12px;
+    max-height: 350px;
+    min-width: 228px;
+    overflow-x: hidden;
+    position: absolute;
+    text-align: left;
+    z-index: 9999;
+}
+.menuSearchTf1 li {
+    border-bottom: 1px solid #f5f5f5;
+    margin: 0;
+    padding: 0;
+    width: 228px;
+}
+li.menuLastChild {
+    border: 0px;
+}
+.menuSearchTf1 li a,
+li a.menu-selected,
+li a.menu-unselected {
+    color: #6a6a6a;
+    display: block;
+    line-height: 18px;
+    list-style: none outside none;
+    padding: 4px 24px 4px 4px;
+    text-decoration: none;
+}
+.menuSearchTf1 li a:hover,
+li a.menu-selected {
+    background: #00a99d;
+    border-radius: 0;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.menuSpanArrow {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+.searchText {
+    color: #50b6bf;
+    font-weight: normal;
+}
+/* menu search end */
+/* breadcrumb starts here*/
+
+#breadCrumb {
+    float: left;
+    padding: 0;
+    font-family: Montserrat-Regular;
+}
+#breadCrumb span {
+    font-size: 16px;
+    padding: 0 10px;
+}
+.breadCrumb {
+    overflow: hidden;
+    width: 980px;
+}
+#menuList > li > a > span {
+    color: #00a99d !important;
+}
+#menuList > li > a:hover > span {
+    color: #FFFFFF !important;
+}
